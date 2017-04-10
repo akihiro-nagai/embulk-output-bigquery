@@ -251,7 +251,7 @@ module Embulk
           when 'STRING'
             Proc.new {|val|
               next nil if val.nil?
-              val.to_json
+              val
             }
           when 'RECORD'
             Proc.new {|val|
